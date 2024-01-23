@@ -1,13 +1,13 @@
 package return_method_quiz;
 
-public class Customer {
+public class ReturnMethodQuiz2 {
 	int wallet;
 	
-	Product product;
+	ReturnMethodQuiz4 product;
 	
-	public Customer(int wallet) {
+	public ReturnMethodQuiz2(int wallet) {
 		this.wallet = wallet;
-		this.product = new Product();
+		this.product = new ReturnMethodQuiz4();
 	}
 	
 	

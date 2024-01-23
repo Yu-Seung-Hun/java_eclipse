@@ -1,4 +1,4 @@
-package return_method_quiz;
+package vending_machine;
 
 public class VendingMachine {
 	

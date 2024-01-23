@@ -1,12 +1,12 @@
 package return_method_quiz;
 
-public class Mart {
+public class ReturnMethodQuiz3 {
 
 	public static void main(String[] args) {
 		
-		VendingMachine drinkMachine = new VendingMachine();
+		ReturnMethodQuiz5 drinkMachine = new ReturnMethodQuiz5();
 		
-		Customer musk = new Customer(200_000);
+		ReturnMethodQuiz2 musk = new ReturnMethodQuiz2(200_000);
 		
 		drinkMachine.insertMoney(musk);
 		drinkMachine.pressButton(musk);
