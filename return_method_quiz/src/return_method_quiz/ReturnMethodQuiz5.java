@@ -23,6 +23,22 @@ public class ReturnMethodQuiz5 {
 		int father = 40;
 		int mother = 36;
 		int daugther = 11;
+		
+		int adultOneWayFlightFare = 300_000;
+		int kidOneWayFlightFare = 120_000;
+		
+		int fee = 0;
+		
+		fee += Fee(father, adultOneWayFlightFare, kidOneWayFlightFare);
+		fee += Fee(mother, adultOneWayFlightFare, kidOneWayFlightFare);
+		fee += Fee(daugther, adultOneWayFlightFare, kidOneWayFlightFare);
+		
+		if(fee <= money) {
+			System.out.println("여행가자!");
+		}
+		else {
+			System.out.println("다음에 가자 ㅠㅠ");
+		}
 	}
 	
 }
