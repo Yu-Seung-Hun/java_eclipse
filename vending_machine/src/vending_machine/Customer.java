@@ -1,9 +1,12 @@
 package vending_machine;
 
 public class Customer {
-	int wallet;
+	/**
+	 * 고객이 가진 
+	 */
+	private int wallet;
 	
-	Product product;
+	private Product product;
 	
 	public Customer(int wallet) {
 		this.wallet = wallet;
@@ -21,14 +24,27 @@ public class Customer {
 	
 	
 	public void addStock(String name, int price) {
-		if(this.product.name == null) {
-			this.product.name = name;
-			this.product.price = price;
-			this.product.quantity = 1;
+		if(this.product.getName() == null) {
+			this.product.setName(name);
+			this.product.setPrice(price);
+			this.product.setQuantity(1);
 		}
 		
 		else {
-			this.product.quantity++;
+//			this.product.quantity++;
+			int quantity = this.product.getQuantity();
+			quantity++;
+			this.product.setQuantity(quantity);
 		}
+	}
+	
+	// wallet의 getter
+	public int getWallet() {
+		return this.wallet;
+	}
+	
+	// product의 getter
+	public Product getProduct() {
+		return this.product;
 	}
 }
