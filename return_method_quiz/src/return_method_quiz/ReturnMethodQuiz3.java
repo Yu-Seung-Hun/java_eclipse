@@ -1,23 +1,17 @@
 package return_method_quiz;
 
 public class ReturnMethodQuiz3 {
+	
+	public static int cel_To_fah(int celsius) {
+		int result = (celsius * 9/5) + 32;
+		return result;
+	}
 
 	public static void main(String[] args) {
+		int celsius = 30;
+		int fahrenheit = 0;
 		
-		ReturnMethodQuiz5 drinkMachine = new ReturnMethodQuiz5();
-		
-		ReturnMethodQuiz2 musk = new ReturnMethodQuiz2(200_000);
-		
-		drinkMachine.insertMoney(musk);
-		drinkMachine.pressButton(musk);
-		drinkMachine.insertMoney(musk);
-		drinkMachine.pressButton(musk);
-		
-		System.out.println("자판기의 잔액: " + drinkMachine.money);
-		System.out.println("자판기의 상품 수량" + drinkMachine.product.quantity);
-		System.out.println("자판기의 상품 이름: " + drinkMachine.product.name);
-		System.out.println("고객의 지갑 잔액: " + musk.wallet);
-		System.out.println("고객의 상품 수량: " + musk.product.quantity);
-		
+		fahrenheit = cel_To_fah(celsius);
+		System.out.println(fahrenheit);
 	}
 }

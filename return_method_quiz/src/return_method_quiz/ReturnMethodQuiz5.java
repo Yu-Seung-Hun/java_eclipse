@@ -2,38 +2,27 @@ package return_method_quiz;
 
 public class ReturnMethodQuiz5 {
 	
-	ReturnMethodQuiz4 product;
-	
-	int money;
-	
-	
-	public ReturnMethodQuiz5() {
-		System.out.println("자판기 인스턴스를 만들었습니다!");
+	public static int Fee(int age, int adultFee, int kidFee) {
 		
-		this.product = new ReturnMethodQuiz4();
-		this.product.name = "제로콜라";
-		this.product.price = 1600;
-		this.product.quantity = 50;
+		int result = 0;
 		
-		this.money = 100_000;
-		
-		
-	}
-	
-	
-	public void insertMoney(ReturnMethodQuiz2 customer) {
-		this.money += this.product.price;
-		customer.pay(this.product.price);
-	}
-	
-	
-	public void pressButton(ReturnMethodQuiz2 customer) {
-		if(this.product.quantity <= 0) {
-			return;
+		if(age > 19) {
+			result = adultFee;
+		}
+		else {
+			result = kidFee;
 		}
 		
-		this.product.quantity--;
-		customer.addStock(this.product.name, this.product.price);
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+		int money = 1_000_000;
+		
+		int father = 40;
+		int mother = 36;
+		int daugther = 11;
 	}
 	
 }

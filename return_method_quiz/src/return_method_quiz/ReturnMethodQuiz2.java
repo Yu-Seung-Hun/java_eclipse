@@ -1,34 +1,19 @@
 package return_method_quiz;
 
 public class ReturnMethodQuiz2 {
-	int wallet;
 	
-	ReturnMethodQuiz4 product;
-	
-	public ReturnMethodQuiz2(int wallet) {
-		this.wallet = wallet;
-		this.product = new ReturnMethodQuiz4();
+	public static int getSeconds(int minutes, int seconds) {
+		int result = minutes * 60 + seconds;
+		return result;
 	}
 	
-	
-	public void pay(int price) {
-		if(this.wallet < price) {
-			return;
-		}
+	public static void main(String[] args) {
 		
-		this.wallet -= price;
-	}
-	
-	
-	public void addStock(String name, int price) {
-		if(this.product.name == null) {
-			this.product.name = name;
-			this.product.price = price;
-			this.product.quantity = 1;
-		}
+		int minutes = 5;
+		int seconds = 50;
+		int time = 0;
 		
-		else {
-			this.product.quantity++;
-		}
+		time = getSeconds(minutes, seconds);
+		System.out.println(time);
 	}
 }
