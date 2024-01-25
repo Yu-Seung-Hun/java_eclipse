@@ -8,11 +8,8 @@ public class Order {
 		
 		drink.Print();
 		
-		Product product = drink.order("몬스터", 5);
+		drink.order("몬스터", 5);
 		
-		System.out.println(">> 주문결과: " + product.name +
-							", " + product.price +
-							", " + product.quantity);
 		System.out.println();
 		
 		drink.Print();
