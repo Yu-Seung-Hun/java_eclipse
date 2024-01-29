@@ -2,7 +2,7 @@ package vending_machine;
 
 public class Customer {
 	/**
-	 * 고객이 가진 
+	 * 고객이 가진 돈
 	 */
 	private int wallet;
 	
