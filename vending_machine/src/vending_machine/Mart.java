@@ -4,20 +4,30 @@ public class Mart {
 
 	public static void main(String[] args) {
 		
-		VendingMachine drinkMachine = new VendingMachine();
+		Sellable drinkMachine = new VendingMachine();
 		
 		Customer musk = new Customer(200_000);
 		
-		drinkMachine.insertMoney(musk);
-		drinkMachine.pressButton(musk);
-		drinkMachine.insertMoney(musk);
-		drinkMachine.pressButton(musk);
+		drinkMachine.insertMoney(musk, "제로펩시");
+		drinkMachine.pressButton(musk, "제로펩시", 50);
+		drinkMachine.insertMoney(musk, "제로펩시");
+		drinkMachine.pressButton(musk, "제로펩시");
 		
-		System.out.println("자판기의 잔액: " + drinkMachine.money);
-		System.out.println("자판기의 상품 수량" + drinkMachine.product.getQuantity());
-		System.out.println("자판기의 상품 이름: " + drinkMachine.product.getName());
-		System.out.println("고객의 지갑 잔액: " + musk.getWallet());
-		System.out.println("고객의 상품 수량: " + musk.getProduct().getQuantity());
+		drinkMachine.printProducts();
+		musk.printProducts();
+		
+		
+		// VendingMachine 클래스인 snackMachine 변수를 선언하고 초기화
+		// 환불 가능한 VendingMachine
+		Sellable snackMachine = new RefundableVendingMachine(400);
+		
+		snackMachine.insertMoney(musk, "제로펩시");
+		snackMachine.pressButton(musk, "제로펩시", 50);
+		snackMachine.insertMoney(musk, "제로펩시");
+		snackMachine.pressButton(musk, "제로펩시", 2);
+		
+		snackMachine.printProducts();
+		musk.printProducts();
 		
 	}
 }

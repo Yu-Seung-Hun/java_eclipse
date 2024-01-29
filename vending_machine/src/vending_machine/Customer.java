@@ -118,7 +118,7 @@ public class Customer {
 		
 		for(Product product : this.productArray) {
 			if(product != null) {
-				// 자판기의 상품 수량과 상품 이름을 출력
+				// 고객의 상품 수량과 상품 이름을 출력
 				System.out.println("고객의 상품 수량: " + product.getQuantity());
 				System.out.println("고객의 상품 이름: " + product.getName());
 			}
