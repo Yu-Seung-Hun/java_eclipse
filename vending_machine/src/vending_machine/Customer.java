@@ -63,7 +63,7 @@ public class Customer {
 		
 		Product product = this.getProductByName(name);
 		
-		if(product != null) { // 있다면 productCount만큼 수량만 증
+		if(product != null) { // 있다면 productCount만큼 수량만 증가 
 			int quantity = product.getQuantity();
 			quantity += productCount;
 			product.setQuantity(quantity);
@@ -100,7 +100,7 @@ public class Customer {
 	
 	
 	// 외부에서 호출 불가능
-	private int gettNullIndex() {
+	private int getNullIndex() {
 		
 		// null index를 알고싶다.
 		for(int i=0; i<this.productArray.length; i++) {
