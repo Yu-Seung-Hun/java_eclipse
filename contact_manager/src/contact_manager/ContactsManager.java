@@ -14,17 +14,12 @@ public class ContactsManager implements ContactInf {
 	
 	public ContactsManager() {
 		contactsList = new ArrayList<>();
+		System.out.println("배열생성 완료.");
 	}
 	
 	@Override
 	public void printContactList() {
-		
-		
-		for(String list : this.contactsList) {
-			
-			
-			
-		}
+		// TODO Auto-generated method stub
 		
 	}
 

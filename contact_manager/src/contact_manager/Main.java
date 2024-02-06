@@ -20,11 +20,11 @@ public class Main {
 		
 		
 		
-//		ContactsManager cm = new ContactsManager();
-//		
-//		cm.addContact("승훈", "010-1234-5678");
-//		cm.printContactList();
-//		
+		ContactsManager cm = new ContactsManager();
+		
+		cm.addContact("승훈", "010-1234-5678");
+		cm.printContactList();
+		
 	}
 	
 }
