@@ -12,7 +12,8 @@ public interface ContactInf {
 	public void printBlockList();
 	
 	// 연락처 추가
-	public void addContact(String name, String phoneNum);
+//	public void addContact(String name, String phoneNum);
+	public void addContact();
 	
 	// 연락처 삭제
 	public void deleteContact(int index);

@@ -2,18 +2,19 @@ package contact_manager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ContactsManager implements ContactInf {
 	
 	
 	/**
-	 * 연락처
+	 * 한 사람에 대한 연락처를 여러개 저장할때 쓰이는 변수 
 	 */
-	private List<String> contactsList;
+	private List<String> phoneNumList;
 	
 	
 	public ContactsManager() {
-		contactsList = new ArrayList<>();
+		phoneNumList = new ArrayList<>();
 		System.out.println("배열생성 완료.");
 	}
 	
@@ -36,7 +37,18 @@ public class ContactsManager implements ContactInf {
 	}
 
 	@Override
-	public void addContact(String name, String phoneNum) {
+	public void addContact() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String name; // 이름 
+		String phoneNum; // 휴대폰 번호
+		
+		System.out.println("이름을 입력하세요.");
+		name = sc.nextLine();
+		
+		System.out.println("휴대폰 번호를 입력하세요.");
+		phoneNum = sc.nextLine();
 		
 		
 		
