@@ -50,6 +50,11 @@ public class SlicingExample {
 			.limit(3)
 			.forEach( (dish) -> System.out.println("타입: " + dish));
 		
+		menu.stream()
+			.filter(d -> d.getCalories() > 300)
+			.map(Dish::getName)
+			.limit(3)
+			.forEach(System.out::println);
 		
 		
 	}
